@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="mei.ico">
+    <title>太原理工大学图像标记平台</title>
+ 
+    <link rel="stylesheet" type="text/css" href="login.css"/>
+    
+    
+</head>
+ 
+<body>
+<div id="login_frame">
+    <h2>登录窗口</h2>
+    <h4 style="font-family:微软雅黑">太原理工大学图像标记平台</h4>
+ 
+    <form >
+
+
+        <p><label class="label_input">学号</label><input type="text" id="StudentId" class="text_field"/></p>
+        <p><label class="label_input">姓名</label><input type="text" id="StudentName" class="text_field"/></p>
+ 
+        <div id="login_control">
+            <input type="button" id="btn_login" value="登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录" onclick="userLogin();"/>
+        </div>
+    </form>
+</div>
+
+
+<script type="text/javascript">
+
+
+function userLogin(){
+		//获取用户名和密码
+		var StudentId = document.getElementById("StudentId").value;
+		var StudentName = document.getElementById("StudentName").value;
+		//发送AJAX POST请求完成登录
+		//1、创建AJAX核心对象
+		var xhr = null;
+		if(window.XMLHttpRequest){
+			xhr = new XMLHttpRequest();
+		}else{
+			xhr = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		//2、注册回调函数
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4){
+				if(xhr.status == 200){//200表示服务器正常响应结束
+					if (xhr.responseText =="正确"){
+						window.location.href="via.jsp";
+					}else if (xhr.responseText == "学号错误"){
+						alert("学号错误！");
+					}else if (xhr.responseText == "姓名错误"){
+						alert("姓名错误！");
+					}
+					
+					
+					
+				}else{
+					//弹出错误代码（xhr.status属性可以获取到HTTP的响应状态码）
+					alert(xhr.status);
+				}
+			}
+		}
+		//3、开启通道
+		xhr.open("POST", "login2.do", true);
+		//发送POST请求必须使用表单form进行提交， 只有form才能提交post请求
+		//使用POST请求以下代码行必须有
+		//ajax post请求的乱码，需要在这里处理，注意：字符集需要和浏览器的字符集相同，需要和服务器当中的字符集相同。
+		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");  //模拟表单提交数据
+		//xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+		//4.发送请求
+		xhr.send("StudentId=" + StudentId + "&StudentName=" + StudentName);  //post请求提交数据在send方法当中提交
+	}
+
+	</script>
+</body>
+</html>
