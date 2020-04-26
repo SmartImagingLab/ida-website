@@ -1,2 +1,9 @@
 # ida-website
-IDA(Intelligent Data Annotation) platform provides data sets for neural networks.
+本平台既可以对本地图像数据进行标注，也可以远程标注服务器端图像数据。主要是为训练不同神经网络模型提供可靠的人工标注数据，尤其是对目标检测相关的神经网络。
+## Requrie
+* jdk 1.8
+* tomacat 9.0
+## Use
+可下载ida.war，发布在服务器上使用。<br>
+在同一局域网下，用户在浏览器地址栏输入IP址通过平台登录界面登录后进行操作使用。<br>
+使用细节，可查看平台使用说明书。
