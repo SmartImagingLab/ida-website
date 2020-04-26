@@ -3,7 +3,10 @@
 ## Requrie
 * jdk 1.8
 * tomacat 9.0
-## Use
+## Direction for Use
 可下载ida.war，发布在服务器上使用。<br>
 在同一局域网下，用户在浏览器地址栏输入IP址通过平台登录界面登录后进行操作使用。<br>
-使用细节，可查看平台使用说明书。
+使用细节，可查看平台使用[说明书](https://github.com/SmartImagingLab/ida-website/使用说明书.pdf)。
+## Show
+[image](https://github.com/SmartImagingLab/ida-website/tree/master/images/登录界面.jpg)
+[image](https://github.com/SmartImagingLab/ida-website/tree/master/images/主界面.jpg)
