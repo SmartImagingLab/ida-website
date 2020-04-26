@@ -8,5 +8,5 @@
 在同一局域网下，用户在浏览器地址栏输入IP址通过平台登录界面登录后进行操作使用。<br>
 使用细节，可查看平台使用[说明书](https://github.com/SmartImagingLab/ida-website/blob/master/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E4%B9%A6.pdf)。
 ## Show
-[登陆界面](https://github.com/SmartImagingLab/ida-website/tree/master/images/登录界面.jpg) <br>
-[主界面](https://github.com/SmartImagingLab/ida-website/tree/master/images/主界面.jpg)
+[登陆界面.jpg](https://github.com/SmartImagingLab/ida-website/tree/master/images/登录界面.jpg) <br>
+[主界面.jpg](https://github.com/SmartImagingLab/ida-website/tree/master/images/主界面.jpg)
